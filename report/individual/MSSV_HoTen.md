@@ -6,13 +6,13 @@ Dữ liệu: 12 ảnh người COCO val2017 (Lin et al., 2014) và 8 ảnh chân
 
 ## 0. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email:
-- Link repository:
-- Phiên bản CVAT (Help → About):
-- Máy: hệ điều hành ___ · RAM ___ GB · chạy CVAT chế độ đầy đủ / lite
-- Bộ ảnh (`src/exports/assignment.json` do `lab.py setup` tạo): có / không
+- Họ tên: Trần Đức Kỳ
+- MSSV: 2A202603277
+- Email: tranducky03@gmail.com
+- Link repository: https://github.com/STSGx5/K5-L2B-DAY04-TranDucKy-2A202603277-KeypointPose-Student.git
+- Phiên bản CVAT (Help → About): Server version: 2.74.1
+- Máy: hệ điều hành 16· RAM ___ GB · chạy CVAT chế độ đầy đủ / lite
+- Bộ ảnh (`src/exports/assignment.json` do `lab.py setup` tạo): có 
 - Giờ bắt đầu:
 - Giờ kết thúc:
 
@@ -20,29 +20,29 @@ Dữ liệu: 12 ảnh người COCO val2017 (Lin et al., 2014) và 8 ảnh chân
 
 | Label | Kiểu | Số điểm | Tên điểm đúng bảng của lab? | Đúng thứ tự? | Số cạnh |
 |---|---|---:|---|---|---:|
-| `person` | | | | | |
-| `face` | | | | | |
+| `person` |Skeleton |17 |Có | Có|16 |
+| `face` |Skeleton |13 |Có | Có| 13 |
 
 Mẫu `person` dựng theo người quay mặt về camera (các điểm `left_*` nằm bên phải khung mẫu)? Có / Không
-
+- Có nếu mẫu của bạn đặt left_* ở bên phải khung. Cảnh báo lr_swap ở bước trước cho thấy script kiểm tra đang dùng quy ước này, nên mẫu nên dựng như vậy. Bạn hãy mở mẫu để xác nhận.
 Cách đổi cờ `occluded` / `outside` cho **một điểm** trên phiên bản CVAT này (một câu):
-
+- Chọn skeleton, bấm vào điểm cần đổi rồi dùng nút Occluded Q, Outside O
 ...
 
 ## 2. Số lượng đã gán và thời gian (CP1, CP2)
 
 | Nhóm ảnh | Số ảnh | Số skeleton đã gán | Số người dưới 60 px (không gán) | Số poster / gương / màn hình bỏ qua | Thời gian (phút) |
 |---|---:|---:|---:|---:|---:|
-| `easy` | 5 | | | | |
-| `occluded` | 3 | | | | |
-| `back` | 2 | | | | |
-| `small` | 1 | | | | |
-| `crowd` | 1 | | | | |
-| `faces` | 8 | | — | | |
+| `easy` | 5 |5 | 0| | |
+| `occluded` | 3 |7 |4 | | |
+| `back` | 2 | 4| 2| | |
+| `small` | 1 | 5| | | |
+| `crowd` | 1 |3 | | | |
+| `faces` | 8 | 8| — | | |
 
 - Số ảnh người đã xong ở mốc phút 105: ___ / 10
 - Thời gian thực tế (phút): CP1 ___ · CP2 ___ · CP3 ___
-- Ảnh tốn thời gian nhất là ảnh nào, vì sao?
+- Ảnh tốn thời gian nhất là ảnh nào, vì sao? - Người quay ngược lại và bị một phần vật thể che mất 
 
 ...
 
@@ -52,9 +52,8 @@ Mỗi điểm bạn phân vân một dòng, nhất là phân vân giữa `v = 1`
 
 | Ảnh | Người / mặt | Điểm | Cờ đã chọn | Phân vân giữa | Lý do chọn |
 |---|---|---|---:|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|000000043500.jpg |Người | tay phải và khửu tay phải| V=1 | v=1 và v=0 | vì từ tư thế đứng và hành động đang làm |
+
 
 ## 4. Bảng tự review (CP3)
 
